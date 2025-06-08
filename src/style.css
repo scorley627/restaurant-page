@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: lightblue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6bbad;
+  font-weight: bold;
+}
+
+.restaurant-name {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.restaurant-description {
+  margin-top: 12px;
+  text-align: center;
+}

@@ -24,19 +24,23 @@ const MENU = {
   ENTREES: [
     {
       name: "Veggie Curry",
-      description: "",
+      description:
+        "Cauliflower, bell pepper, potato, squash, and carrot in a housemade yellow coconut curry sauce. Served with naan.",
     },
     {
       name: "Stir Fry",
-      description: "",
+      description:
+        "Ground beef, carrot, zuchinni, onion, and bell pepper stir fried in a brown sauce. Seved with rice.",
     },
     {
       name: "Chile Colorado",
-      description: "",
+      description:
+        "Classic Chihuahuan dish made with pork smothered in a spicy red chile sauce. Served with refried beans and corn tortillas.",
     },
     {
-      name: "Schnitzel",
-      description: "",
+      name: "Pork Schnitzel",
+      description:
+        "Double-battered pork cutlet served with cucumber salad and mashed potatoes.",
     },
   ],
   SIDES: [
@@ -46,7 +50,12 @@ const MENU = {
     "Tortilla chips and salsa",
     "Wilted kale",
   ],
-  DESSERT: ["Choco flan", "Dark chocolate brownies", "Blackberry cobbler"],
+  DESSERT: [
+    "Choco flan",
+    "Dark chocolate brownies",
+    "Blackberry cobbler",
+    "*Specialty* yogurt dessert",
+  ],
   DRINKS: [
     "Jarritos",
     "Hibiscus orange Tea",

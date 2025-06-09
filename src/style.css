@@ -65,3 +65,16 @@ ul {
   display: grid;
   gap: 8px;
 }
+
+.content__box--heading {
+  width: 700px;
+}
+
+.menu-section {
+  display: grid;
+  gap: 25px;
+}
+
+.menu-item-description {
+  font-size: 0.9em;
+}

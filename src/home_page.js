@@ -20,15 +20,18 @@ export default function loadHomePage() {
   const restaurantAddress = createRestaurantAddress();
 
   const content = document.querySelector(".content");
-  content.appendChild(restaurantHeading);
-  content.appendChild(restaurantDescription);
-  content.appendChild(restaurantHours);
-  content.appendChild(restaurantAddress);
+  content.replaceChildren(
+    restaurantHeading,
+    restaurantDescription,
+    restaurantHours,
+    restaurantAddress
+  );
 }
 
 function createRestaurantHeading() {
   const heading = document.createElement("h1");
   heading.classList.add("content__box");
+  heading.classList.add("content__box--heading");
   heading.textContent = RESTAURANT_INFO.NAME;
   return heading;
 }

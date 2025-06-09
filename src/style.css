@@ -1,65 +1,62 @@
 * {
   margin: 0;
   padding: 0;
+  color: springgreen;
 }
 
-header {
-  background-color: lightblue;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ul {
+  list-style: none;
+}
+
+.page {
+  background-color: darkslateblue;
+}
+
+.header {
+  background-color: blueviolet;
   min-width: 900px;
 }
 
-header button {
+.header__nav {
+  height: 100px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__button {
+  background-color: darkslateblue;
   width: 100px;
   height: 40px;
   border: none;
   border-radius: 20px;
-  background-color: #e6bbad;
   font-weight: bold;
+  cursor: pointer;
 }
 
-body {
-  background-color: #e6bbad;
-}
-
-#content {
+.content {
+  background-color: blueviolet;
   box-sizing: border-box;
-  background-color: lightblue;
   width: 900px;
+  margin: 32px auto;
+  padding: 64px;
+  border-radius: 25px;
+  display: grid;
+  gap: 50px;
+}
+
+.content__box {
+  background-color: rgb(109, 35, 179);
+  box-sizing: border-box;
+  width: 500px;
+  padding: 25px;
+  line-height: 1.5;
   margin: auto;
-  margin-top: 32px;
-  padding: 32px;
-}
-
-.restaurant-heading {
   text-align: center;
-}
-
-.restaurant-description {
-  width: 300px;
-  margin: auto;
-  margin-top: 64px;
-  text-align: center;
-}
-
-.hours-section {
-  text-align: center;
-  margin-top: 64px;
-}
-
-.hours-list {
-  margin-top: 8px;
-  list-style: none;
-}
-
-.address-section {
-  text-align: center;
-  margin-top: 64px;
-}
-
-.address {
-  margin-top: 8px;
+  border: 5px solid gold;
+  border-radius: 25px;
+  display: grid;
+  gap: 8px;
 }

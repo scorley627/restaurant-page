@@ -18,7 +18,7 @@ export default function loadHomePage() {
   const restaurantHours = createRestaurantHours();
   const restaurantAddress = createRestaurantAddress();
 
-  const content = document.querySelector("#content");
+  const content = document.querySelector(".content");
   content.appendChild(restaurantHeading);
   content.appendChild(restaurantDescription);
   content.appendChild(restaurantHours);
@@ -27,14 +27,14 @@ export default function loadHomePage() {
 
 function createRestaurantHeading() {
   const heading = document.createElement("h1");
-  heading.classList.add("restaurant-heading");
+  heading.classList.add("content__box");
   heading.textContent = RESTAURANT_NAME;
   return heading;
 }
 
 function createRestaurantDescription() {
   const description = document.createElement("p");
-  description.classList.add("restaurant-description");
+  description.classList.add("content__box");
   description.textContent = RESTAURANT_DESCRIPTION;
   return description;
 }
@@ -44,15 +44,14 @@ function createRestaurantHours() {
   const hoursHeading = document.createElement("h2");
   const hoursList = document.createElement("ul");
 
+  hoursSection.classList.add("content__box");
+  hoursHeading.textContent = "Hours";
+
   for (const hours of RESTAURANT_HOURS) {
     const hoursItem = document.createElement("li");
     hoursItem.textContent = hours;
     hoursList.appendChild(hoursItem);
   }
-
-  hoursSection.classList.add("hours-section");
-  hoursHeading.textContent = "Hours";
-  hoursList.classList.add("hours-list");
 
   hoursSection.appendChild(hoursHeading);
   hoursSection.appendChild(hoursList);
@@ -65,9 +64,8 @@ function createRestaurantAddress() {
   const addressHeading = document.createElement("h2");
   const address = document.createElement("p");
 
-  addressSection.classList.add("address-section");
+  addressSection.classList.add("content__box");
   addressHeading.textContent = "Address";
-  address.classList.add("address");
   address.textContent = RESTAURANT_ADDRESS;
 
   addressSection.appendChild(addressHeading);

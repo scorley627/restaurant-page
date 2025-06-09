@@ -9,6 +9,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 900px;
 }
 
 header button {
@@ -20,12 +21,45 @@ header button {
   font-weight: bold;
 }
 
-.restaurant-name {
-  margin-top: 16px;
+body {
+  background-color: #e6bbad;
+}
+
+#content {
+  box-sizing: border-box;
+  background-color: lightblue;
+  width: 900px;
+  margin: auto;
+  margin-top: 32px;
+  padding: 32px;
+}
+
+.restaurant-heading {
   text-align: center;
 }
 
 .restaurant-description {
-  margin-top: 12px;
+  width: 300px;
+  margin: auto;
+  margin-top: 64px;
   text-align: center;
+}
+
+.hours-section {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.hours-list {
+  margin-top: 8px;
+  list-style: none;
+}
+
+.address-section {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.address {
+  margin-top: 8px;
 }

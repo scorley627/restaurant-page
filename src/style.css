@@ -22,23 +22,23 @@ ul {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   gap: 16px;
 }
 
 .header__button {
-  background-color: darkslateblue;
+  background-color: rgb(109, 35, 179);
   width: 100px;
   height: 40px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px 10px 0px 0px;
   font-weight: bold;
   cursor: pointer;
 }
 
 .header__button:disabled {
   cursor: default;
-  background-color: rgb(109, 35, 179);
+  background-color: darkslateblue;
 }
 
 .content {

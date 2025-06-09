@@ -8,35 +8,70 @@ const MENU = {
     {
       name: "Cauliflower Bowl",
       description:
-        "roasted curry cauliflower over sweet potato hummus, topped with avocado",
+        "Roasted curry cauliflower over sweet potato hummus, topped with avocado",
     },
     {
       name: "Kitchen Sink Taco",
       description:
-        "sauteed onion, pepper, black beans, squash, and kale enveloped in scrambled cage-free eggs, topped with hot sauce or creamy avocado salsa",
+        "Sauteed onion, pepper, black beans, squash, and kale enveloped in scrambled cage-free eggs, topped with hot sauce or creamy avocado salsa",
     },
     {
       name: "Green Machine Smoothie",
       description:
-        "spinach, avocado, celery, apple, peanut butter, protein powder",
+        "Spinach, avocado, celery, apple, peanut butter, protein powder",
+    },
+  ],
+  ENTREES: [
+    {
+      name: "Veggie Curry",
+      description: "",
+    },
+    {
+      name: "Stir Fry",
+      description: "",
+    },
+    {
+      name: "Chile Colorado",
+      description: "",
+    },
+    {
+      name: "Schnitzel",
+      description: "",
     },
   ],
   SIDES: [
-    "refried beans",
-    "rice",
-    "roasted veggies",
-    "tortilla chips and salsa",
-    "wilted kale",
+    "Refried beans",
+    "Rice",
+    "Roasted veggies",
+    "Tortilla chips and salsa",
+    "Wilted kale",
+  ],
+  DESSERT: ["Choco flan", "Dark chocolate brownies", "Blackberry cobbler"],
+  DRINKS: [
+    "Jarritos",
+    "Hibiscus orange Tea",
+    "Iced peppermint Tea",
+    "Aqua fresca (horchata or tamarind)",
   ],
 };
 
 export default function loadMenuPage() {
   const menuHeading = createMenuHeading();
-  const lunchSection = createLunchSection();
-  const sidesSection = createSidesSection();
+  const lunchSection = createMenuSection("Lunch", MENU.LUNCH);
+  const entreesSection = createMenuSection("Entrees", MENU.ENTREES);
+  const sidesSection = createListSection("Sides", MENU.SIDES);
+  const dessertSection = createListSection("Dessert", MENU.DESSERT);
+  const drinksSection = createListSection("Drinks", MENU.DRINKS);
 
   const content = document.querySelector(".content");
-  content.replaceChildren(menuHeading, lunchSection, sidesSection);
+  content.replaceChildren(
+    menuHeading,
+    lunchSection,
+    entreesSection,
+    sidesSection,
+    dessertSection,
+    drinksSection
+  );
 }
 
 function createMenuHeading() {
@@ -47,16 +82,16 @@ function createMenuHeading() {
   return heading;
 }
 
-function createLunchSection() {
-  const lunchSection = document.createElement("section");
-  const lunchHeading = document.createElement("h2");
+function createMenuSection(sectionName, menuItems) {
+  const menuSection = document.createElement("section");
+  const sectionHeading = document.createElement("h2");
 
-  lunchSection.classList.add("menu-section");
-  lunchHeading.classList.add("content__box");
-  lunchHeading.textContent = "Lunch";
+  menuSection.classList.add("menu-section");
+  sectionHeading.classList.add("content__box");
+  sectionHeading.textContent = sectionName;
 
-  lunchSection.appendChild(lunchHeading);
-  for (const item of MENU.LUNCH) {
+  menuSection.appendChild(sectionHeading);
+  for (const item of menuItems) {
     const itemBox = document.createElement("div");
     const itemName = document.createElement("h3");
     const itemDescription = document.createElement("p");
@@ -68,28 +103,28 @@ function createLunchSection() {
 
     itemBox.appendChild(itemName);
     itemBox.appendChild(itemDescription);
-    lunchSection.appendChild(itemBox);
+    menuSection.appendChild(itemBox);
   }
 
-  return lunchSection;
+  return menuSection;
 }
 
-function createSidesSection() {
-  const sidesSection = document.createElement("section");
-  const sidesHeading = document.createElement("h2");
-  const sidesList = document.createElement("ul");
+function createListSection(sectionName, menuItems) {
+  const listSection = document.createElement("section");
+  const listHeading = document.createElement("h2");
+  const list = document.createElement("ul");
 
-  sidesSection.classList.add("content__box");
-  sidesHeading.textContent = "Sides";
+  listSection.classList.add("content__box");
+  listHeading.textContent = sectionName;
 
-  for (const side of MENU.SIDES) {
-    const sideItem = document.createElement("li");
-    sideItem.textContent = side;
-    sidesList.appendChild(sideItem);
+  for (const item of menuItems) {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    list.appendChild(listItem);
   }
 
-  sidesSection.appendChild(sidesHeading);
-  sidesSection.appendChild(sidesList);
+  listSection.appendChild(listHeading);
+  listSection.appendChild(list);
 
-  return sidesSection;
+  return listSection;
 }

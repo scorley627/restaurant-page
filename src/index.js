@@ -3,15 +3,10 @@ import loadHomePage from "./home_page.js";
 import loadMenuPage from "./menu_page.js";
 import loadContactPage from "./contact_page.js";
 
-// const homeButton = document.querySelector(".home-button");
-// let currentButton = homeButton;
-// currentButton.disabled = true;
-// loadHomePage();
-
-const menuButton = document.querySelector(".menu-button");
-let currentButton = menuButton;
+const homeButton = document.querySelector(".home-button");
+let currentButton = homeButton;
 currentButton.disabled = true;
-loadMenuPage();
+loadHomePage();
 
 const headerNav = document.querySelector(".header__nav");
 headerNav.addEventListener("click", function (event) {

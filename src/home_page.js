@@ -1,6 +1,7 @@
 const RESTAURANT_INFO = {
   NAME: "Eyes of the Heart Eatery",
-  DESCRIPTION: "This Super Special Restaurant is wonderful with amazing food.",
+  DESCRIPTION:
+    "Organic cuisine inspired by the flavors of the world and the abundance of Earth.",
   HOURS: [
     "Sunday: 8am - 8pm",
     "Monday: 8am - 6pm",
@@ -39,6 +40,7 @@ function createRestaurantHeading() {
 function createRestaurantDescription() {
   const description = document.createElement("p");
   description.classList.add("content__box");
+  description.classList.add("restaurant-description");
   description.textContent = RESTAURANT_INFO.DESCRIPTION;
   return description;
 }

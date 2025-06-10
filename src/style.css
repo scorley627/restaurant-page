@@ -15,10 +15,10 @@ ul {
 .header {
   background-color: blueviolet;
   min-width: 900px;
+  padding-top: 16px;
 }
 
 .header__nav {
-  height: 100px;
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
@@ -33,6 +33,7 @@ ul {
   border: none;
   border-radius: 10px 10px 0px 0px;
   font-weight: bold;
+  font-size: 1.1em;
   cursor: pointer;
 }
 
@@ -70,11 +71,24 @@ ul {
   width: 700px;
 }
 
+.restaurant-description {
+  font-size: 1.3em;
+}
+
 .menu-section {
   display: grid;
   gap: 25px;
 }
 
+.menu-section__heading {
+  width: 600px;
+  font-size: 1.8em;
+}
+
 .menu-item-description {
   font-size: 0.9em;
+}
+
+.menu-list {
+  width: 600px;
 }

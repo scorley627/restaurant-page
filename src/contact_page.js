@@ -49,7 +49,7 @@ function createContactBox(contact) {
 
   contactBox.classList.add("content__box");
   contactName.textContent = contact.name;
-  contactRole.textContent = contact.name;
+  contactRole.textContent = contact.role;
   contactPhone.textContent = contact.phone;
   contactEmail.textContent = contact.email;
 

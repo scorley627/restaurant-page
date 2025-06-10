@@ -3,17 +3,17 @@ const MENU = {
     {
       name: "BBQ Pork Bowl",
       description:
-        "BBQ pork, roasted carrots, wilted kale, topped with avocado and hot sauce",
+        "BBQ pork, roasted carrots, wilted kale. Topped with avocado and hot sauce.",
     },
     {
       name: "Cauliflower Bowl",
       description:
-        "Roasted curry cauliflower over sweet potato hummus, topped with avocado",
+        "Roasted curry cauliflower over sweet potato hummus. Topped with avocado.",
     },
     {
       name: "Kitchen Sink Taco",
       description:
-        "Sauteed onion, pepper, black beans, squash, and kale enveloped in scrambled cage-free eggs, topped with hot sauce or creamy avocado salsa",
+        "Sauteed onion, pepper, black beans, squash, and kale enveloped in scrambled cage-free eggs. Topped with hot sauce or creamy avocado salsa.",
     },
     {
       name: "Green Machine Smoothie",
@@ -66,11 +66,11 @@ const MENU = {
 
 export default function loadMenuPage() {
   const menuHeading = createMenuHeading();
-  const lunchSection = createMenuSection("Lunch", MENU.LUNCH);
-  const entreesSection = createMenuSection("Entrees", MENU.ENTREES);
-  const sidesSection = createListSection("Sides", MENU.SIDES);
-  const dessertSection = createListSection("Dessert", MENU.DESSERT);
-  const drinksSection = createListSection("Drinks", MENU.DRINKS);
+  const lunchSection = createMenuSection("LUNCH", MENU.LUNCH);
+  const entreesSection = createMenuSection("ENTREES", MENU.ENTREES);
+  const sidesSection = createListSection("SIDES", MENU.SIDES);
+  const dessertSection = createListSection("DESSERT", MENU.DESSERT);
+  const drinksSection = createListSection("DRINKS", MENU.DRINKS);
 
   const content = document.querySelector(".content");
   content.replaceChildren(
@@ -87,7 +87,7 @@ function createMenuHeading() {
   const heading = document.createElement("h1");
   heading.classList.add("content__box");
   heading.classList.add("content__box--heading");
-  heading.textContent = "Menu";
+  heading.textContent = "MENU";
   return heading;
 }
 
@@ -97,6 +97,7 @@ function createMenuSection(sectionName, menuItems) {
 
   menuSection.classList.add("menu-section");
   sectionHeading.classList.add("content__box");
+  sectionHeading.classList.add("menu-section__heading");
   sectionHeading.textContent = sectionName;
 
   menuSection.appendChild(sectionHeading);
@@ -124,6 +125,7 @@ function createListSection(sectionName, menuItems) {
   const list = document.createElement("ul");
 
   listSection.classList.add("content__box");
+  listSection.classList.add("menu-list");
   listHeading.textContent = sectionName;
 
   for (const item of menuItems) {

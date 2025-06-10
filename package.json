@@ -1,7 +1,7 @@
 {
   "name": "restaurant-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic restaurant webpage to demonstrate bundling using webpack.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/scorley627/restaurant-page.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sean Corley",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scorley627/restaurant-page/issues"

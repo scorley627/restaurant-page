@@ -1,3 +1,3 @@
 # restaurant-page
 
-A basic restaurant created to demonstrate bundling with webpack.
+A basic restaurant page created to demonstrate bundling with webpack.
